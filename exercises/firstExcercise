@@ -1,0 +1,9 @@
+Youtube's dark mode 
+
+Psuedocode on the clientside.
+
+In the settings drop down menu on the client  there is a dark theme toggle.
+
+Activation of the toggle changes the background to black in the css file. 
+
+The page changes to a black background color.
