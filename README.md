@@ -8,3 +8,8 @@ The *ice* folder contains in-class exercises.
    I am interested in a web design and mobile design position. I would like to design front-end frameworks and applications. I would enjoy using CSS and java script and HTML5 in a full time, day to day environment. https://github.com/Gab-Sinclair
 
    closes #60
+
+   ## Merging 
+ 1. Item 1 [Google](http://google.com)
+ 2. Item 2
+ 3. Item 3
