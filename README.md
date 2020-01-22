@@ -13,6 +13,8 @@ The *ice* folder contains in-class exercises.
  1. Item 1 [Google](http://google.com)
  2. Item 2
  3. Item 3
+
  ## conflicts 
  
 This section represnts code on the server that isnt on the local repository.
+ 
