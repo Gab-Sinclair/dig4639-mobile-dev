@@ -17,4 +17,4 @@ The *ice* folder contains in-class exercises.
  ## conflicts 
  
 This section represnts code on the server that isnt on the local repository.
- 
+   
