@@ -14,4 +14,4 @@ function scopeDemo(x1) {
     }
 }
 scopeDemo(x);
-console.log(x)
+console.log(x);
