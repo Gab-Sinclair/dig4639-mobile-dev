@@ -8,11 +8,12 @@ class Adder{
     }
 
     sum(a,b){
-       x = (a + b);
+       this.props.x = (a + b);
     }
 
     render(){
-    return <p>The sum of" a.value "and" b.value "is" x.value"</p>;
+        this.sum();
+          return '<p>The sum of ${this.props.a}; and ${this.props.b}; is ${this.props.x}</p>';
     }
 }
 
