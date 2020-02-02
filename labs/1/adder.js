@@ -1,18 +1,20 @@
 class Adder{
-    constructor (b, c, props){
-        this.props = props;
-        this.b = b;
-        this.c = c;
+    constructor (props){
+        this.props =props;
+       this.b = {};
+       this.c = {};
+
     }
 
    sum(b,c){
-        return (this.b + this.c);
+        return (this.props.b + this.props.c);
     }
 
     
     render(){
-        let result = `<p> the sum of ${this.b} and ${this.c} is ${this.sum()} </p>`;
-            console.log(result);
- }
+
+        let result = `the sum of ${this.props.b} and ${this.props.c} is ${this.sum()} `;
+            return result;
+    }
 }
 module.exports = Adder;
