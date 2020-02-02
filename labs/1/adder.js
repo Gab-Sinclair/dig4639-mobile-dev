@@ -1,21 +1,16 @@
-import React from "react";
-
-class Adder extends React.Componet{
-
-    constructor(a,b){
-    this.props.a = a;
-    this.props.b = b;
-    this.props.x = x;
+class Adder{
+    constructor (b,c){
+        this.b = b;
+        this.c = c;
     }
 
-    sum(a,b){
-       x = ({a} + {b});
-       return x;
+   sum(b,c){
+        let x = b + c ;
     }
 
     render(){
-        this.sum(a,b);
-          return '<p>The sum of ${this.props.a}; and ${this.props.b}; is ${this.props.x}</p>';
-    }
+         this.sum();
+           return '<p> the sum of {this.b} and  {this.c}  is {this.b + this.c} </p>';
+ }
 }
 module.exports = Adder;
