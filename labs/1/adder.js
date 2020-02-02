@@ -1,6 +1,6 @@
 class Adder{
     constructor (props){
-        this.props =props;
+       this.props =props;
        this.b = {};
        this.c = {};
 
