@@ -1,6 +1,8 @@
-let Card; // TODO: Replace this with the correct import statementfunction 
-runOnLoad()
-{    // Create a container for us   
+import Card from "./components/Card/index.js" 
+
+  function runOnLoad()
+   {    
+  // Create a container for us   
      let element = document.createElement("div");   
       element.id = "container";   
        document.body.appendChild(element);  
@@ -8,4 +10,4 @@ runOnLoad()
          
          element.appendChild(newCard.render());}
 
-         window.addEventListener("DOMContentLoaded", runOnLoad);
+window.addEventListener("DOMContentLoaded", runOnLoad);
