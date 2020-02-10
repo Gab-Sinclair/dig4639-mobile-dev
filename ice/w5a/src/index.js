@@ -14,7 +14,7 @@ function runOnLoad() {
   addTaskButton.addEventListener("click", onClick);
 }
 
-//Create new div for new task
+//Create new div for new task 
 function onClick() { 
   console.log("clicked!");
   var newTask = new Task({
@@ -22,5 +22,5 @@ function onClick() {
   });
   element.appendChild(newTask.render());
 }
-
+ 
 window.addEventListener("DOMContentLoaded", runOnLoad);
