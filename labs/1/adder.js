@@ -1,19 +1,14 @@
 class Adder{
     constructor (props){
        this.props =props;
-       this.b = {};
-       this.c = {};
-
     }
 
-   sum(b,c){
-        return (this.props.b + this.props.c);
+   sum(){
+        return (this.props.a + this.props.b);
     }
 
-    
     render(){
-
-        let result = `the sum of ${this.props.b} and ${this.props.c} is ${this.sum()} `;
+        let result = `<p> the sum of ${this.props.a} and ${this.props.b} is ${this.sum()} <p> `;
             return result;
     }
 }
