@@ -15,7 +15,7 @@ function runOnLoad() {
 }
 
 //Create new div for new task
-function onClick() {
+function onClick() { 
   console.log("clicked!");
   var newTask = new Task({
     content: inputElement.value
