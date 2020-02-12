@@ -8,7 +8,7 @@ class Adder{
     }
 
     render(){
-        let result = `<p> the sum of ${this.props.a} and ${this.props.b} is ${this.sum()} <p> `;
+        let result = `<p> the sum of ${this.props.a} and ${this.props.b} is ${this.sum()} </p>`;
             return result;
     }
 }
