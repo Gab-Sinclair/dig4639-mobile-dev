@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/dig4639-mobile-dev/static/css/main.48d759c9.chunk.css",
-    "main.js": "/dig4639-mobile-dev/static/js/main.53c5efa2.chunk.js",
-    "main.js.map": "/dig4639-mobile-dev/static/js/main.53c5efa2.chunk.js.map",
+    "main.js": "/dig4639-mobile-dev/static/js/main.f652c2bd.chunk.js",
+    "main.js.map": "/dig4639-mobile-dev/static/js/main.f652c2bd.chunk.js.map",
     "runtime-main.js": "/dig4639-mobile-dev/static/js/runtime-main.e7bb69b4.js",
     "runtime-main.js.map": "/dig4639-mobile-dev/static/js/runtime-main.e7bb69b4.js.map",
     "static/js/2.3ded2b1a.chunk.js": "/dig4639-mobile-dev/static/js/2.3ded2b1a.chunk.js",
     "static/js/2.3ded2b1a.chunk.js.map": "/dig4639-mobile-dev/static/js/2.3ded2b1a.chunk.js.map",
     "index.html": "/dig4639-mobile-dev/index.html",
-    "precache-manifest.c8f26ae4d6d1777ce03cc91283703e1d.js": "/dig4639-mobile-dev/precache-manifest.c8f26ae4d6d1777ce03cc91283703e1d.js",
+    "precache-manifest.d82c9ed63987e8d0ecd23302f5d75287.js": "/dig4639-mobile-dev/precache-manifest.d82c9ed63987e8d0ecd23302f5d75287.js",
     "service-worker.js": "/dig4639-mobile-dev/service-worker.js",
     "static/css/main.48d759c9.chunk.css.map": "/dig4639-mobile-dev/static/css/main.48d759c9.chunk.css.map",
     "static/js/2.3ded2b1a.chunk.js.LICENSE.txt": "/dig4639-mobile-dev/static/js/2.3ded2b1a.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e7bb69b4.js",
     "static/js/2.3ded2b1a.chunk.js",
     "static/css/main.48d759c9.chunk.css",
-    "static/js/main.53c5efa2.chunk.js"
+    "static/js/main.f652c2bd.chunk.js"
   ]
 }
