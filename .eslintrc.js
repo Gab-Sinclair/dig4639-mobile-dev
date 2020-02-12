@@ -12,6 +12,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
   },
+  
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -25,3 +26,6 @@ module.exports = {
   rules: {
   }
 }
+module.exports = {
+  parser: "babel-eslint",
+};

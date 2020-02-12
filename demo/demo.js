@@ -11,7 +11,7 @@ class Pet{
    getSpeech(){
        return "I make this sound: ";
    }
-   getIdentity =() =>{
+   getIdentity = () =>{
        console.log(this);
    }
 }
