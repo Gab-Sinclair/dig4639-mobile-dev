@@ -14,13 +14,13 @@ function runOnLoad() {
   addTaskButton.addEventListener("click", onClick);
 }
 
-//Create new div for new task
-function onClick() {
+//Create new div for new task 
+function onClick() { 
   console.log("clicked!");
   var newTask = new Task({
     content: inputElement.value
   });
   element.appendChild(newTask.render());
 }
-
+ 
 window.addEventListener("DOMContentLoaded", runOnLoad);
