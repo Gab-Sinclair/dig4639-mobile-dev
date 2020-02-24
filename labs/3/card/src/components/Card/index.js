@@ -14,7 +14,7 @@ constructor(props) {
 render() { 
 
   return (
-   this.element
+   <body>${this.element}</body>
     );
   }  
 }

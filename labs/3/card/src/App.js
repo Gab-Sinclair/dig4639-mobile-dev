@@ -3,16 +3,17 @@ import './App.css';
 import Card from './components/Card';
 
 
-class App extends React.Component{
-  
-  render(){
-    
+function App(){
+      
+  const cardArray = [
+    <Card content ="this is a card"/>
+  ]
     return(
       <div>
-      <Card content ="this is a card"/>
+        {cardArray}
       </div>
     );
   }
-}
+
 
 export default App;
