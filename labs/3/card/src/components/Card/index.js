@@ -5,16 +5,15 @@ class Card extends React.Component {
 constructor(props) {
     super(props);
     this.props = props;
-    this.element = document.createElement("div");
-    this.element.innerHTML = this.props.content;
-    this.element.className = "card";
+    this.innerHTML = this.props.content;
+ 
 }
 
 
 render() { 
 
   return (
-   <body>${this.element}</body>
+     this.props.content
     );
   }  
 }

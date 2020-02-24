@@ -9,7 +9,7 @@ function App(){
     <Card content ="this is a card"/>
   ]
     return(
-      <div>
+      <div class= "card">
         {cardArray}
       </div>
     );
