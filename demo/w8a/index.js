@@ -74,6 +74,8 @@ printItems(myArray.sort(CompareNumbers));
 printItems(myArray.sort((a,b) => a-b))
 
 
+
+//todolist json style
 const todoList = [
 {
     content :'task 1', priority: 2, completed: true 
@@ -88,6 +90,7 @@ const todoList = [
 console.log(todoList)
 
 
+
 //join todo lines in html 
 function printTodo(arrayInput){
     const htmlArray2 = arrayInput.map((value) =>
@@ -100,6 +103,7 @@ function printTodo(arrayInput){
 console.log(printTodo(todoList).join('\n'))
 
 
+
 //filter array
 const filteredArray = []
 for(const item of todolist){
@@ -109,6 +113,8 @@ if(!item.completed){
 }
 //console.log filtered array
 console.log(printTodo(filteredArray).join('\n'))
+
+
 
 //evaluate only completed items in todoList
 function evalItem (item){
