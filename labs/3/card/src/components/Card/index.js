@@ -6,7 +6,7 @@ constructor (props) {
     super(props);
     this.props = props;
     this.element = document.createElement("div");
-    this.element.innerHTML = props.content;
+    this.element.innerHTML = "this is a card";
     this.element.className = "card";
 }
 
