@@ -9,13 +9,11 @@ class App extends React.Component{
     let element = document.createElement("div");   
     element.id = "container";   
      document.body.appendChild(element);  
-       var newCard = new Card({content:"Sample value provided"});  
+       var newCard = new Card();  
         element.appendChild(newCard.render());
 
     return(
-     <div id ="newCard">
-
-      </div>
+    <div></div>
     );
   }
 }
