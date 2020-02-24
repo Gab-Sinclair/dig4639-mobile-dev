@@ -2,7 +2,7 @@ import React from 'react';
 import "./index.css"
 
 class Card extends React.Component {
-constructor (props) {
+constructor(props) {
     super(props);
     this.props = props;
     this.element = document.createElement("div");
@@ -11,9 +11,10 @@ constructor (props) {
 }
 
 
-render() {   
+render() { 
+
   return (
-    this.element
+   this.element
     );
   }  
 }

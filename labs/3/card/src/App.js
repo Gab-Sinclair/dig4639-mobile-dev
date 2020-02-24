@@ -8,9 +8,9 @@ class App extends React.Component{
   render(){
     
     return(
-    <div>
+      <div>
       <Card content ="this is a card"/>
-    </div>
+      </div>
     );
   }
 }
