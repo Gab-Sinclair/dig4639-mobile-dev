@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
-import Card from './components/Card';
+import CardList from './components/CardList';
+
+function Card(props){
+  return <p className="card" onClick={() => props.removeTask(props.id)}>{props.content}</p>
+}
 
 
-function App(){
-      
-  const cardArray = [
-    <Card content ="this is a card"/>
-  ]
+function App(props){
     return(
-      <div class= "card">
-        {cardArray}
-      </div>
+      <div>
+        <CardList/>
+        </div>
+        
+  
     );
   }
 
@@ -19,4 +21,3 @@ function App(){
 export default App;
 
 
-export default App;
