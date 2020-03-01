@@ -1,11 +1,10 @@
 import React from 'react';
 import data from "./data.json";
 
-
-//TodoItem to pass properties 
+//  Card to pass properties 
 function Card(props){
-  //show the property . content on the card passed in to TodoItem
-    return <p className="card" onClick={() => props.removeTask(props.id)}>{props.title}<br></br>{props.content} <p class="close">x</p></p>
+//show the property . content on the card passed in to Card
+   return <p className="card" onClick={() => props.removeTask(props.id)}><h3>{props.title}</h3><br></br>{props.content} <p class="close">x</p></p>
 }
 
 
@@ -48,7 +47,7 @@ return (
   <input type="text"  ref = "title" />
   <input type="button" value= "Add Task" onClick={(e) => this.addTask(e)} />
   </div>
-  
+
  <br/>
  <input ref = "hideTasks" type="checkbox" id="hidTasks" 
  name="hideTasks" value="hideTasks" onChange= {(e) => this.setState({hideTasks:e.target.checked})}/>
