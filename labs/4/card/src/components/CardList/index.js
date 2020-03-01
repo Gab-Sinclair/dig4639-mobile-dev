@@ -43,9 +43,12 @@ class CardList extends React.Component{
 return (
 
   <>
+  <div class="centr">
   <input type="text" ref = "taskContent" />
-  <input type="text" ref = "title" />
+  <input type="text"  ref = "title" />
   <input type="button" value= "Add Task" onClick={(e) => this.addTask(e)} />
+  </div>
+  
  <br/>
  <input ref = "hideTasks" type="checkbox" id="hidTasks" 
  name="hideTasks" value="hideTasks" onChange= {(e) => this.setState({hideTasks:e.target.checked})}/>
