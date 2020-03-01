@@ -9,5 +9,6 @@
 .close {
   font-size: 1.5em;
   float: right;
+  margin-top: auto;
   cursor: pointer;
 }

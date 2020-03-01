@@ -5,7 +5,7 @@ import data from "./data.json";
 //TodoItem to pass properties 
 function Card(props){
   //show the property . content on the card passed in to TodoItem
-    return <p className="card" onClick={() => props.removeTask(props.id)}>{props.title}<br></br>{props.content} </p>
+    return <p className="card" onClick={() => props.removeTask(props.id)}>{props.title}<br></br>{props.content} <p class="close">x</p></p>
 }
 
 
