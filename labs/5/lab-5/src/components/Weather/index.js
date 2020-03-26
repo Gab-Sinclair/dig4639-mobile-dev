@@ -33,7 +33,7 @@ class Weather extends React.Component {
               this.state.periods.map((value, index) => {
                   return  <div className="card" key={index}>
                       <h3>{value.name}</h3>
-                      <p>Temperature {value.temperature}{value.temperatureUnit}</p>
+                      <p><strong>Temperature {value.temperature}{value.temperatureUnit}</strong></p>
                       <p>{value.detailedForecast}</p>
                       </div>;
               })
