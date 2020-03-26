@@ -1,5 +1,5 @@
 import React from "react";
-
+import { View, Text } from 'react-native';
 class Weather extends React.Component {
 
     constructor(props) {
@@ -29,17 +29,17 @@ class Weather extends React.Component {
   
     render() {
       return(
-        <div>
+        <View>
           {
               this.state.periods.map((value, index) => {
-                  return <div key={index}>
-                      <p>Temperature {value.temperature}{value.temperatureUnit}</p>
-                      <p>{value.detailedForecast}</p>
-                      </div>;
+                  return <View key={index}>
+                      < Text>Temperature {value.temperature}{value.temperatureUnit}</Text>
+                      <Text>{value.detailedForecast}</Text>
+                      </View>;
               })
           
           }
-        </div>
+        </View>
       );
     }
   
