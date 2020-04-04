@@ -39,7 +39,7 @@ export default class App extends React.Component {
     //display data from api in a card with question and answer 
    <View style={styles.container}>
      {this.state.ques.map((value, index) => {
-           <Card key={index}>
+          return <Card key={index}>
               <Text>{value.name}</Text>
               <Text> {value.startTime}</Text>
               {console.log({value})}
