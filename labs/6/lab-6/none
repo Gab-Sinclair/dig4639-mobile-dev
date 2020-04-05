@@ -1,0 +1,27 @@
+
+  constructor(props) {
+    super(props);
+
+    //init question array
+    this.state = {
+      ques:[]
+    };
+  }
+
+componentDidMount() {
+
+    //fetch data and form json results set equal to variable
+    fetch("api")
+    .then(res => res.json())
+    .then((result) => {
+      let ques = result.questions;
+     
+      //set results to array
+      this.setState({
+        ques: ques
+      });
+      console.log({ques})
+    })
+    .catch((error) => {console.log(error)} );
+
+  }
