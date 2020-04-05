@@ -14,12 +14,14 @@ export default class App extends React.Component {
       //empty array for score
       let correcto = []
       //get value from input
-      let tht = document.querySelector('[name = "resul"]');
+      let tht = document.querySelectorAll('input[name="resul"]')
+      
       //get array to show score
       let show = [];
       //area to show score
       let area = document.querySelector("#score")
 
+      console.log(tht)
       //loop through api to find which question and answer match the one in the form 
       //add correct answer number to score array
        Question.forEach((value) =>{
@@ -27,9 +29,6 @@ export default class App extends React.Component {
         if(value.correct == tht.value){
            correcto.push(value);
            show.push(correcto.length)
-         }
-         else{
-          show.push('');
          }
        })
        //see what number is in the array
@@ -48,31 +47,31 @@ export default class App extends React.Component {
 
       <Card>
           <h3>Why is the sky Blue?</h3>
-           <input name="resul"></input>
+           <input type="text" name="resul"></input>
            <Text>Options: oxygen, Who knows, it's not blue</Text>
        </Card>
 
        <Card>
            <h3>Why is the grass Green?</h3>
-           <input name="resul"></input>
+           <input type="text" name="resul"></input>
            <Text>Options: wizards are real, magic, it's not green</Text>
       </Card>
 
       <Card>
            <h3>How is space black?</h3>
-           <input name="resul"></input>
+           <input type="text" name="resul"></input>
            <Text>Options: science, the void, aliens</Text>
       </Card>
 
       <Card>
            <h3>Is pizza good?</h3>
-           <input name="resul"></input>
+           <input type="text" name="resul"></input>
            <Text>Options: yes, no, never tried it</Text>
       </Card>
 
       <Card>
            <h3>Is the sun hot?</h3>
-           <input name="resul"></input>
+           <input type="text" name="resul"></input>
            <button type="submit" onClick={this.findCor}>Submit</button><br/>
            <Text>Options: yes, maybe, its cold</Text>
            <Text id="score"><br/>Your Score is..</Text>
