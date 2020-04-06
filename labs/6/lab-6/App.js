@@ -8,54 +8,38 @@ export default class App extends React.Component {
  constructor(props) {
     super(props);
     this.state = {
-       ques: []
+       correcto: [],
+       show: []
       };
-    }
 
-    componentDidMount() {
+    
 
-    fetch("/api/Question.json")
-      .then(res => res.json())
-      .then((result) => {
-        let ques = result.Questions;
-       
-        //set results to array
-        this.setState({
-          ques: ques
-        });
-        console.log({ques})
-      })
-      .catch((error) => {console.log(error)} );
-  }
+    //function to loop through api 
+    this.findCor = ()=>{
 
-    //function to loop through questions 
-    //Also to match the input answer to the Question's correct answer
-  //   this.findCor = ()=>{
-     //empty array for score
-  //     let correcto = []
      //get value from input
-  //     let tht = document.querySelectorAll('input[name="resul"]')
-     //get array to show score
-  //     let show = [];
+     let tht = document.querySelectorAll('input[name="resul"]').value
      //area to show score
-  //     let area = document.querySelector("#score")
+       let area = document.querySelector("#score")
 
-  //     console.log(tht)
+       console.log(tht)
      //loop through api to find which question and answer match the one in the form 
-     //add correct answer number to score array
-  //      Question.forEach((value) =>{
+        Question.forEach((value) =>{
 
-  //       if(value.correct == tht.value){
-  //          correcto.push(value);
-  //          show.push(correcto.length)
-  //        }
-  //      })
+      //add correct answer number to score array
+         if(value.correct == tht.value){
+           this.setState = {
+             correcto: [value],
+             show:[correcto.length]
+           }
+         }
+       })
       //see what number is in the array
-  //      console.log(show)
-  //   return(
-  //    area.innerHTML=JSON.stringify(show));
-  //      }
-  // }
+       console.log(show)
+     return(
+      area.innerHTML=JSON.stringify(show));
+        }
+   }
     
 
   render(){
