@@ -20,14 +20,9 @@ export default class App extends React.Component {
           let correct = []
         //loop through questions to find which question and answer match the one in the form 
           Question.forEach((value, index) =>{
-              console.log(value.correct)
-              console.log(this.state.userAnswers)
-
               //add correct answer number to score array
               if(value.correct == this.state.userAnswers[index]){
                 correct.push(value.correct)
-                console.log(correct)
-              console.log(correct.length)
               }
             })
             // Update the state here
