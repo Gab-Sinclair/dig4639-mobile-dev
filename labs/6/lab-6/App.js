@@ -47,34 +47,34 @@ export default class App extends React.Component {
     
       <Card>
           <Text style={styles.que}>Why is the sky Blue?</Text>
-           <TextInput type="text" name="resul" onChangeText={(input)=> this.onUserInput(input, 0)}></TextInput>
+           <TextInput style={styles.bor} type="text" name="resul" onChangeText={(input)=> this.onUserInput(input, 0)}></TextInput>
            <Text style={styles.op}>Options: oxygen, Who knows, it's not blue</Text>
        </Card>
 
        <Card>
            <Text style={styles.que}>Why is the grass Green?</Text>
-           <TextInput type="text" name="resul" onChangeText={(input)=> this.onUserInput(input, 1)}></TextInput>
+           <TextInput style={styles.bor} type="text" name="resul" onChangeText={(input)=> this.onUserInput(input, 1)}></TextInput>
            <Text style={styles.op}> Options: wizards are real, magic, it's not</Text>
       </Card>
 
       <Card>
            <Text style={styles.que}>How is space black?</Text>
-           <TextInput type="text" name="resul" onChangeText={(input)=> this.onUserInput(input, 2)}></TextInput>
+           <TextInput style={styles.bor} type="text" name="resul" onChangeText={(input)=> this.onUserInput(input, 2)}></TextInput>
            <Text style={styles.op}>Options: science, the void, aliens</Text>
       </Card>
 
       <Card>
            <Text style={styles.que}>Is pizza good?</Text>
-           <TextInput type="text" name="resul" onChangeText={(input)=> this.onUserInput(input, 3)}></TextInput>
+           <TextInput style={styles.bor} type="text" name="resul" onChangeText={(input)=> this.onUserInput(input, 3)}></TextInput>
            <Text style={styles.op}>Options: yes, no, never tried it</Text>
       </Card>
 
       <Card>
            <Text style={styles.que}>Is the sun hot?</Text>
-           <TextInput type="text" name="resul" onChangeText={(input)=> this.onUserInput(input, 4)}></TextInput>
-           <Button  title="submit" value="submit" onPress={this.findCor}></Button><br/>
-           <Text style={styles.op}>Options: yes, maybe, its cold</Text>
+           <TextInput style={styles.bor} type="text" name="resul" onChangeText={(input)=> this.onUserInput(input, 4)}></TextInput>
+           <Text style={styles.op}>Options: yes, maybe, its cold</Text><br/>
 
+           <Button  title="submit" value="submit" onPress={this.findCor}></Button>
            <Text id="score"><br/>Your Score is..{this.state.show}</Text>
       </Card> 
 
@@ -97,5 +97,9 @@ const styles = StyleSheet.create({
   op :{
     color:'gray',
     fontSize:'10px'
+  },
+  bor:{
+    backgroundColor:'lightgray',
   }
+
 });
