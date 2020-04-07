@@ -4,7 +4,6 @@ import { Button, StyleSheet, Text, View, TextInput } from 'react-native';
 import { Card } from 'react-native-elements';
 
 
-
 export default class App extends React.Component {
  constructor(props) {
     super(props);
