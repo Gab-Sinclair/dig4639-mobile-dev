@@ -1,9 +1,44 @@
 [
-   {"id":0, "Question":"How is the sky Blue?", "correct":"oxygen" },
-   {"id":1, "Question":"How is grass green?", "correct":"magic" },
-   {"id":2, "Question":"How is space black?", "correct":"aliens" },
-   {"id":3, "Question":"Is pizza good?", "correct":"yes" },
-   {"id":4, "Question":"Is the sun hot?", "correct":"yes" }
+   {"id":0, "Question":"How is the sky Blue?", "correct":"oxygen",
+      "options":[
+         {"text":"A", "correct":false},
+         {"text":"B", "correct":true},
+         {"text":"C", "correct":false},
+         {"text":"D", "correct":false}
+      ] 
+   },
+   {"id":1, "Question":"How is grass green?", "correct":"magic",
+      "options":[
+         {"text":"A", "correct":false},
+         {"text":"B", "correct":true},
+         {"text":"C", "correct":false},
+         {"text":"D", "correct":false}
+      ]    
+   },
+   {"id":2, "Question":"How is space black?", "correct":"aliens" ,
+      "options":[
+         {"text":"A", "correct":false},
+         {"text":"B", "correct":true},
+         {"text":"C", "correct":false},
+         {"text":"D", "correct":false}
+      ]    
+   },
+   {"id":3, "Question":"Is pizza good?", "correct":"yes" ,
+      "options":[
+         {"text":"A", "correct":false},
+         {"text":"B", "correct":true},
+         {"text":"C", "correct":false},
+         {"text":"D", "correct":false}
+      ]    
+   },
+   {"id":4, "Question":"Is the sun hot?", "correct":"yes" ,
+      "options":[
+         {"text":"A", "correct":false},
+         {"text":"B", "correct":true},
+         {"text":"C", "correct":false},
+         {"text":"D", "correct":false}
+      ]    
+   }
 
 
 
