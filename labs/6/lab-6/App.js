@@ -55,7 +55,7 @@ export default class App extends React.Component {
        <Card>
            <Text style={styles.que}>Why is the grass Green?</Text>
            <TextInput type="text" name="resul" onChangeText={(input)=> this.onUserInput(input, 1)}></TextInput>
-           <Text> style={styles.op}Options: wizards are real, magic, it's not</Text>
+           <Text style={styles.op}> Options: wizards are real, magic, it's not</Text>
       </Card>
 
       <Card>
