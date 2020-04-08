@@ -1,0 +1,37 @@
+[
+    {"id":0, "Question":"How is the sky Blue?", "correct":"oxygen",
+       "options":[
+          {"text":"Oxygen", "correct":true},
+          {"text":"It's not", "correct":false},
+          {"text":"Science", "correct":false}
+       ] 
+    },
+    {"id":1, "Question":"How is grass green?", "correct":"magic",
+       "options":[
+          {"text":"Magic", "correct":true},
+          {"text":"Wizards", "correct":false},
+          {"text":"Who knows", "correct":false}
+       ]    
+    },
+    {"id":2, "Question":"How is space black?", "correct":"aliens" ,
+       "options":[
+          {"text":"Aliens", "correct":true},
+          {"text":"The void", "correct":false},
+          {"text":"Star wars", "correct":false}
+       ]    
+    },
+    {"id":3, "Question":"Is pizza good?", "correct":"yes" ,
+       "options":[
+          {"text":"Yes", "correct":false},
+          {"text":"Heck yes", "correct":true},
+          {"text":"No", "correct":false}
+       ]    
+    },
+    {"id":4, "Question":"Is the sun hot?", "correct":"yes" ,
+       "options":[
+          {"text":"Yes", "correct":true},
+          {"text":"Sometimes", "correct":false},
+          {"text":"No", "correct":false}
+       ]    
+    }
+ ]
