@@ -11,17 +11,19 @@ class ContactsSee extends React.Component {
 
   componentDidMount() {
 
-    window.fetch("http://plato.mrl.ai:8080/contacts", {headers: {API: "sinclair"}})
+    fetch("http://plato.mrl.ai:8080/contacts", {headers: {API: "sinclair"}})
     .then((res) => res.json())
     .then((data) => {
+        console.log(data)
       this.setState({contacts: data.contacts});
+      console.log(this.contacts)
     });
 
   }
 
   render() {
     return (
-      <div>
+      <div> <p>Contact List</p>
        {
          this.state.contacts.map((value, index) => {
            return <p key={index}>{value.name}</p>;

@@ -9,7 +9,7 @@ class App extends React.Component{
     <ContactsSee/>
     </div>
   );
-}
+  }
 }
 
 export default App;
