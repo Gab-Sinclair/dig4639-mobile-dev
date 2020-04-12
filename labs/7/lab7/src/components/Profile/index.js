@@ -24,11 +24,7 @@ class Profile extends React.Component {
   render() {
     return (
       <div> <p>Profile List</p>
-       {
-      //   this.state.profile.map((value, index) => {
-        //   return <p key={index}>{value.name}</p>;
-         })
-       }
+        <p>{this.state.profile}</p> 
       </div>
     );
   }
