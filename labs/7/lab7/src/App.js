@@ -10,9 +10,13 @@ class App extends React.Component{
   return (
     <div>
     <ContactsSee/>
+    <br/>
     <ContactsAdd/>
+    <br/>
     <Profile />
+    <br/>
     <ContactsRemove/>
+    <br/>
     </div>
   );
   }

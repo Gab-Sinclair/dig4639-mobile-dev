@@ -15,16 +15,19 @@ class Profile extends React.Component {
     .then((res) => res.json())
     .then((data) => {
         console.log(data)
-      this.setState({profile: data});
-      console.log(this.profile)
+      this.setState({profile:[data]});
     });
 
   }
 
   render() {
     return (
-      <div> <p>Profile List</p>
-        <p>{this.state.profile}</p> 
+      <div> <h2>Profile List</h2>
+        { 
+        this.state.profile.map((value, index) => {
+          return <p key={index}> {value.name}, {value.count}</p> ;
+        })
+       }
       </div>
     );
   }

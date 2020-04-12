@@ -16,14 +16,13 @@ class ContactsSee extends React.Component {
     .then((data) => {
         console.log(data)
       this.setState({contacts: data.contacts});
-      console.log(this.contacts)
     });
 
   }
 
   render() {
     return (
-      <div> <p>Contact List</p>
+      <div> <h2>Contact List</h2>
        {
          this.state.contacts.map((value, index) => {
            return <p key={index}>{value.name} , {value.number}</p>;
