@@ -1,39 +1,59 @@
 import React from 'react';
+const HEADERS ={
+    "Method" : "GET",
+    "headers" : {
+      "API" : "sinclair",
+      "Content-Type" : "application/json",
+      "Accept": "application/json"
+    }
+}
 
-class ContactsSee extends React.Component {
+const addUser =() =>
+{
+  let newHeaders = {...HEADERS,
+    "method" : "POST",
+    body: JSON.stringify({
+      name: "input",
+      number: "number"
+    })}
+  
+
+
+  fetch("http://plato.mrl.ai:8080/contacts/add", newHeaders)
+  .then((res) => res.json())
+  .then((data) => {
+      console.log(data)
+}
+, [])
+}
+
+class ContactsAdd extends React.Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {contactsAdd: []};
+    this.state = {contactsAdded: []};
 
-  }
-
-  componentDidMount() {
-
-    fetch("http://plato.mrl.ai:8080/contacts/add", {headers: {API: "sinclair"}})
-    .then((res) => res.json())
-    .then((data) => {
-        console.log(data)
-      this.setState({contactsAdd: data.contacts});
-      console.log(this.contactsAdd)
-    });
   }
 
 
   //function to add contact to server 
   
   render() {
+
     return (
       <div>
-       {
-         this.state.contactsAdd.map((value, index) => {
-           return <p key={index}>{value.name}</p>;
-         })
-       }
+        <h2>Add User</h2>
+        <label for="name">Full Name</label><br/>
+         <input type="text" id ="name"/><br/>
+
+         <label for="name">Number</label><br/>
+         <input type="text" id ="number"/><br/>
+
+         <button type="submit" onClick={addUser}>Submit</button>
       </div>
     );
   }
 }
 
-export default ContactsSee;
+export default ContactsAdd;
