@@ -8,47 +8,82 @@ const HEADERS ={
     }
 }
 
-const addUser =(input, inputs) =>
-{
-  let newHeaders = {...HEADERS,
-    "method" : "POST",
-    body: JSON.stringify({
-      name: `${input}`,
-      number:`${inputs}`
-    })}
+
+
+
+
+// const addUser =(value, value2) =>
+// {
+//   let newHeaders = {...HEADERS,
+//     "method" : "POST",
+//     body: JSON.stringify({
+//       name:"" ,
+//       number:""
+//     })}
   
 
 
-  fetch("http://plato.mrl.ai:8080/contacts/add", newHeaders)
-  .then((res) => res.json())
-  .then((data) => {
-      console.log(data)
-}
-, [])
-}
+//   fetch("http://plato.mrl.ai:8080/contacts/add", newHeaders)
+//   .then((res) => res.json())
+//   .then((data) => {
+//       console.log(data)
+// }
+// , [])
+// }
+
+
+
+
 
 class ContactsAdd extends React.Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {contactsAdded: []};
+    this.textInput = React.createRef();
+    this.textInput2 = React.createRef();
 
+    this.state = {
+      value: '',
+      value2: ''
+    }
   }
+  
+  handleSubmit = e => {
+    e.preventDefault();
+    this.setState({ value: this.textInput.current.value})
+    this.setState({ value2: this.textInput2.current.value})
 
+    console.log(this.state.value2)
+    
+    let newHeaders = {...HEADERS,
+      "method" : "POST",
+      body: JSON.stringify({
+        name: this.state.value,
+        number:this.state.value2
+      })}
+      fetch("http://plato.mrl.ai:8080/contacts/add", newHeaders)
+      .then((res) => res.json())
+      .then((data) => {
+          console.log(data)
+    }
+    , [])
+  };
   
   render() {
 
     return (
       <div>
         <h2>Add User</h2>
+        <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Full Name</label><br/>
-         <input type="text" id ="name"  onChangeText={(input)=> addUser(input)}/><br/>
+         <input type="text" ref={this.textInput} id ="name" /><br/>
 
          <label htmlFor="name">Number</label><br/>
-         <input type="text" id ="number"  onChangeText={(inputs)=> addUser(inputs)}/><br/>
+         <input type="text" ref={this.textInput2} id ="number" /><br/>
 
          <button type="submit">Submit</button>
+         </form>
       </div>
     );
   }
