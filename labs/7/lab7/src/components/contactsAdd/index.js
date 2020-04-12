@@ -8,13 +8,13 @@ const HEADERS ={
     }
 }
 
-const addUser =() =>
+const addUser =(input, inputs) =>
 {
   let newHeaders = {...HEADERS,
     "method" : "POST",
     body: JSON.stringify({
-      name: "input",
-      number: "number"
+      name: `${input}`,
+      number:`${inputs}`
     })}
   
 
@@ -36,21 +36,19 @@ class ContactsAdd extends React.Component {
 
   }
 
-
-  //function to add contact to server 
   
   render() {
 
     return (
       <div>
         <h2>Add User</h2>
-        <label for="name">Full Name</label><br/>
-         <input type="text" id ="name"/><br/>
+        <label htmlFor="name">Full Name</label><br/>
+         <input type="text" id ="name"  onChangeText={(input)=> addUser(input)}/><br/>
 
-         <label for="name">Number</label><br/>
-         <input type="text" id ="number"/><br/>
+         <label htmlFor="name">Number</label><br/>
+         <input type="text" id ="number"  onChangeText={(inputs)=> addUser(inputs)}/><br/>
 
-         <button type="submit" onClick={addUser}>Submit</button>
+         <button type="submit">Submit</button>
       </div>
     );
   }

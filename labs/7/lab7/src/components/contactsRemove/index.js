@@ -23,7 +23,7 @@ class ContactsRemove extends React.Component {
 
   render() {
     return (
-      <div> <p>Contact List</p>
+      <div> <p>remove contact</p>
        {
          this.state.contacts.map((value, index) => {
            return <p key={index}>{value.name}</p>;

@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import ContactsSee from './components/contactsSee';
 import ContactsAdd from './components/contactsAdd';
+import Profile from './components/Profile';
+import ContactsRemove from './components/contactsRemove';
 
 class App extends React.Component{
   render(){
@@ -9,6 +11,8 @@ class App extends React.Component{
     <div>
     <ContactsSee/>
     <ContactsAdd/>
+    <Profile />
+    <ContactsRemove/>
     </div>
   );
   }

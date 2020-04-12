@@ -5,7 +5,7 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {contacts: []};
+    this.state = {profile: []};
 
   }
 
@@ -15,18 +15,18 @@ class Profile extends React.Component {
     .then((res) => res.json())
     .then((data) => {
         console.log(data)
-      this.setState({contacts: data.contacts});
-      console.log(this.contacts)
+      this.setState({profile: data});
+      console.log(this.profile)
     });
 
   }
 
   render() {
     return (
-      <div> <p>Contact List</p>
+      <div> <p>Profile List</p>
        {
-         this.state.contacts.map((value, index) => {
-           return <p key={index}>{value.name}</p>;
+      //   this.state.profile.map((value, index) => {
+        //   return <p key={index}>{value.name}</p>;
          })
        }
       </div>
