@@ -48,19 +48,12 @@ class ContactsAdd extends React.Component {
       value2: ''
     }
   }
-  
-  handleSubmit = e => {
-    e.preventDefault();
-    this.setState({ value: this.textInput.current.value})
-    this.setState({ value2: this.textInput2.current.value})
-
-    console.log(this.state.value2)
-    
+  newVal= () => {
     let newHeaders = {...HEADERS,
       "method" : "POST",
       body: JSON.stringify({
-        name: this.state.value,
-        number:this.state.value2
+        name: this.textInput.current.value,
+        number:this.textInput2.current.value
       })}
       fetch("http://plato.mrl.ai:8080/contacts/add", newHeaders)
       .then((res) => res.json())
@@ -68,7 +61,14 @@ class ContactsAdd extends React.Component {
           console.log(data)
     }
     , [])
-  };
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.newVal()
+  }
+  
+
   
   render() {
 
