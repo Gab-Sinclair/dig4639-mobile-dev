@@ -57,13 +57,14 @@ class ContactsAdd extends React.Component {
       <div>
         <h2>Add User</h2>
         <form onSubmit={this.handleSubmit}>
-        <label htmlFor="name">Full Name</label><br/>
-         <input type="text" ref={this.textInput} id ="name" /><br/>
+  
+            <label htmlFor="name">Full Name</label><br/>
+            <input type="text" ref={this.textInput} id ="name" /><br/>
 
-         <label htmlFor="name">Number</label><br/>
-         <input type="text" ref={this.textInput2} id ="number" /><br/>
+            <label htmlFor="name">Number</label><br/>
+            <input type="text" ref={this.textInput2} id ="number" /><br/>
 
-         <button type="submit">Submit</button>
+            <button type="submit">Submit</button>
          </form>
       </div>
     );
