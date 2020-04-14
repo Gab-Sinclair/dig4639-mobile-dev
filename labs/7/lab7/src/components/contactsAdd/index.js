@@ -6,65 +6,44 @@ const HEADERS ={
       "Content-Type" : "application/json",
       "Accept": "application/json"
     }
-}
-
-
-
-
-
-// const addUser =(value, value2) =>
-// {
-//   let newHeaders = {...HEADERS,
-//     "method" : "POST",
-//     body: JSON.stringify({
-//       name:"" ,
-//       number:""
-//     })}
-  
-
-
-//   fetch("http://plato.mrl.ai:8080/contacts/add", newHeaders)
-//   .then((res) => res.json())
-//   .then((data) => {
-//       console.log(data)
-// }
-// , [])
-// }
-
-
-
-
+  }
 
 class ContactsAdd extends React.Component {
 
   constructor(props) {
     super(props);
 
+    //set input reference 
     this.textInput = React.createRef();
     this.textInput2 = React.createRef();
 
+    //track value of input state 
     this.state = {
       value: '',
       value2: ''
     }
   }
-  newVal= () => {
-    let newHeaders = {...HEADERS,
-      "method" : "POST",
-      body: JSON.stringify({
-        name: this.textInput.current.value,
-        number:this.textInput2.current.value
-      })}
-      fetch("http://plato.mrl.ai:8080/contacts/add", newHeaders)
-      .then((res) => res.json())
-      .then((data) => {
-          this.setState({value:this.textInput.current.value})
-          this.setState({value:this.textInput2.current.value})
-          console.log(data)
-    }
-    , [])
-  }
 
+
+        //send header body 
+      newVal= () => {
+        let newHeaders = {...HEADERS,
+          "method" : "POST",
+          body: JSON.stringify({
+            name: this.textInput.current.value,
+            number:this.textInput2.current.value
+          })}
+          fetch("http://plato.mrl.ai:8080/contacts/add", newHeaders)
+          .then((res) => res.json())
+          .then((data) => {
+              this.setState({value:this.textInput.current.value})
+              this.setState({value:this.textInput2.current.value})
+              console.log(data)
+        }
+        , [])
+      }
+
+//on submit event prevent default and run function 
   handleSubmit = e => {
     e.preventDefault();
     this.newVal()
