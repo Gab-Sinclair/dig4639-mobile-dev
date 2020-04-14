@@ -1,33 +1,55 @@
 import React from 'react';
+const HEADERS ={
+  "Method" : "GET",
+  "headers" : {
+    "API" : "sinclair",
+    "Content-Type" : "application/json",
+    "Accept": "application/json"
+  }
+}
+
 
 class ContactsRemove extends React.Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {contacts: []};
-
+    this.textInput = React.createRef();
+    this.state =this.state = {
+      value: '',
+    }
+  }
+  delVal= () => {
+    let newHeaders = {...HEADERS,
+      "method" : "POST",
+      body: JSON.stringify({
+        position:this.textInput.current.value,
+      })}
+      fetch("http://plato.mrl.ai:8080/contacts/remove", newHeaders)
+      .then((res) => res.json())
+      .then((data) => {
+          this.setState({value:this.textInput.current.value})
+          console.log(data)
+    }
+    , [])
   }
 
-  componentDidMount() {
 
-    fetch("http://plato.mrl.ai:8080/contacts/remove", {headers: {API: "sinclair"}})
-    .then((res) => res.json())
-    .then((data) => {
-        console.log(data)
-      this.setState({contacts: data.contacts});
-      console.log(this.contacts)
-    });
-
+  handleSubmit = e => {
+    e.preventDefault();
+    this.delVal()
   }
 
   render() {
     return (
       <div> <h2>Remove contact</h2>
-       {
-      
-       }
-      </div>
+      <form onSubmit={this.handleSubmit}>
+      <label htmlFor="name">Position</label><br/>
+       <input type="text" ref={this.textInput} id ="position" /><br/>
+
+       <button type="submit">Submit</button>
+       </form>
+    </div>
     );
   }
 }
