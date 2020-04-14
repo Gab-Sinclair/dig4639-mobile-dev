@@ -13,7 +13,7 @@ class ContactsSee extends React.Component {
 
     fetch("http://plato.mrl.ai:8080/contacts", {headers: {API: "sinclair"}})
     .then((res) => res.json())
-    .then((data) => {
+    .then((data, ) => {
         console.log(data)
       this.setState({contacts: data.contacts});
     });
