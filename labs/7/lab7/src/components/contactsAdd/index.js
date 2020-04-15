@@ -36,8 +36,7 @@ class ContactsAdd extends React.Component {
           fetch("http://plato.mrl.ai:8080/contacts/add", newHeaders)
           .then((res) => res.json())
           .then((data) => {
-              this.setState({value:this.textInput.current.value})
-              this.setState({value:this.textInput2.current.value})
+              this.props.newContact(data.added)
               console.log(data)
         }
         , [])
