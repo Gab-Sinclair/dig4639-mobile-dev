@@ -8,7 +8,7 @@ import ContactsRemove from './components/contactsRemove';
 class App extends React.Component{
   render(){
   return (
-    <div>
+    <div className="parent">
     <ContactsSee/>
     <br/>
     <ContactsAdd/>
