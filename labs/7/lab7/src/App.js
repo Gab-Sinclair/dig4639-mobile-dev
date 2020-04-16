@@ -11,7 +11,8 @@ class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {contacts: [],
-                   profile: []};
+                   profile: []
+            };
 
   }
 
@@ -23,17 +24,17 @@ class App extends React.Component{
         console.log(data)
       this.setState({contacts: data.contacts});
     });
-    
-    fetch("http://plato.mrl.ai:8080/profile", {headers: {API: "sinclair"}})
-    .then((res) => res.json())
-    .then((datas) => {
-        console.log(datas)
-      this.setState({profile:[datas]});
-      
-    });
+   
   }
 
-
+  //fetch profile list
+  componentDidUpdate(){
+  fetch("http://plato.mrl.ai:8080/profile", {headers: {API: "sinclair"}})
+  .then((res) => res.json())
+  .then((datas) => {
+    this.setState({profile:[datas]});
+  });
+  }
 
 
   //update added contacts on client
@@ -50,7 +51,6 @@ class App extends React.Component{
    this.setState({contacts: removeC});
   }
 
-//fetch profile data
   
 
   render(){
