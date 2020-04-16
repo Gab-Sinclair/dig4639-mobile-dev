@@ -16,7 +16,7 @@ class ContactsRemove extends React.Component {
     //set input reference 
     this.textInput = React.createRef();
     //track value of input state 
-    this.state =this.state = {
+      this.state = {
       value: '',
     }
   }
@@ -32,7 +32,8 @@ class ContactsRemove extends React.Component {
       fetch("http://plato.mrl.ai:8080/contacts/remove", newHeaders)
       .then((res) => res.json())
       .then((data) => {
-        this.props.takeContact(data.removed)
+       // this.props.takeContact(data.removed)
+       this.props.takeContact(this.textInput.current.value)
           console.log(data)
     }
     , [])
