@@ -56,6 +56,7 @@ class App extends React.Component{
   render(){
   return (
     <div className="parent">
+      <h1>App diagram</h1>
     <ContactsSee contacts = {this.state.contacts}/>
     <br/>
     <ContactsAdd newContact ={(contact) => this.addContact(contact) }/>

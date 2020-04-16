@@ -3,12 +3,13 @@
 }
 
 .parent{
-  text-align: center;
+  text-align:center;
   margin: 0 auto;
+  background-color: lightblue;
 }
 
 .App-header {
-  background-color: hsl(220, 13%, 18%);
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

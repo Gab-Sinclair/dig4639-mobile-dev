@@ -1,4 +1,6 @@
 import React from 'react';
+import './index.css'
+
 const HEADERS ={
     "Method" : "GET",
     "headers" : {
@@ -53,17 +55,17 @@ class ContactsAdd extends React.Component {
   render() {
 
     return (
-      <div>
-        <h2>Add User</h2>
+      <div className="body1">
+        <h2 className="txt1">Add User</h2>
         <form onSubmit={this.handleSubmit}>
   
-            <label htmlFor="name">Full Name</label><br/>
-            <input type="text" ref={this.textInput} id ="name" /><br/>
+            <label htmlFor="name" className="txt1">Full Name</label><br/>
+            <input type="text" className="take1" ref={this.textInput} id ="name" /><br/>
 
-            <label htmlFor="name">Number</label><br/>
-            <input type="text" ref={this.textInput2} id ="number" /><br/>
+            <label htmlFor="name" className="txt1">Number</label><br/>
+            <input type="text" className="take1" ref={this.textInput2} id ="number" /><br/>
 
-            <button type="submit">Submit</button>
+            <button type="submit" className='but'>Submit</button>
          </form>
       </div>
     );

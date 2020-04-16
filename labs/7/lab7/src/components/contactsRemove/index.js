@@ -1,4 +1,6 @@
 import React from 'react';
+import './index.css'
+
 const HEADERS ={
   "Method" : "GET",
   "headers" : {
@@ -47,14 +49,14 @@ class ContactsRemove extends React.Component {
 
   render() {
     return (
-      <div> <h2>Remove contact</h2>
+      <div className="body2"> <h2 className="txt2" >Remove contact</h2>
 
         <form onSubmit={this.handleSubmit}>
  
-          <label htmlFor="name">Position</label><br/>
-          <input type="text" ref={this.textInput} id ="position" /><br/>
+          <label htmlFor="name" className="txt2">Position</label><br/>
+          <input type="text" className="take2" ref={this.textInput} id ="position" /><br/>
 
-          <button type="submit">Submit</button>
+          <button type="submit" className="but2">Submit</button>
        </form>
     </div>
     );

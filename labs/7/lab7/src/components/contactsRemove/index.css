@@ -1,0 +1,31 @@
+.body2{
+    background-color: gray;
+}
+.txt2{
+    color:rgba(10, 255, 133, 0.932);
+
+}
+.take2{
+    width:200px;
+    background-color: rgba(2, 26, 14, 0.932);
+    color:white
+}
+.but2 {
+	background-color:#000000;
+	border-radius:15px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:12px;
+	padding:10px 15px;
+	text-decoration:none;
+}
+.but2:hover {
+	background-color:rgba(10, 255, 133, 0.932);
+}
+.but2:active {
+	position:relative;
+	top:1px;
+}

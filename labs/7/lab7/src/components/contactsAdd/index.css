@@ -1,0 +1,33 @@
+.body1{
+    background-color: rgb(247, 175, 21);
+}
+.txt1{
+    color:rgba(136, 0, 29, 0.932);
+}
+
+.take1{
+    width:200px;
+    background-color: rgba(136, 0, 29, 0.932);
+    color:white
+}
+
+.but {
+	background-color:#ffffff;
+	border-radius:15px;
+	border:1px solid #ab1824;
+	display:inline-block;
+	cursor:pointer;
+	color:rgba(136, 0, 29, 0.932);
+	font-family:Verdana;
+	font-size:12px;
+	padding:10px 15px;
+	text-decoration:none;
+}
+.but:hover {
+    background-color:rgba(136, 0, 29, 0.932);
+    color: rgba(255, 255, 255, 0.932);
+}
+.but:active {
+	position:relative;
+	top:1px;
+}
